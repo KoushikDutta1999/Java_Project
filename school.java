@@ -91,7 +91,6 @@ class school1 {
     void setAdmissionOpen(boolean admissionOpen) {
         this.admissionOpen = admissionOpen;
     }
-
 }
 
 class Student extends school1 {
@@ -221,8 +220,10 @@ public class school {
         int pass = 12345;
         System.out.println("Enter user name : ");
         String uname = sc.next();
+
         System.out.println("Enter Password");
         int pas = sc.nextInt();
+
         if (user.equals(uname) && pas == pass) {
             System.out.println("Enter School name");
             String scname = sc.next();
