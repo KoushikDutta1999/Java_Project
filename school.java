@@ -226,20 +226,28 @@ public class school {
         if (user.equals(uname) && pas == pass) {
             System.out.println("Enter School name");
             String scname = sc.next();
+
             System.out.println("Enter School Address");
             String scAddress = sc.next();
+
             System.out.println("Enter School phoneNumber");
             String scNumber = sc.next();
+
             System.out.println("Enter School Principal Name");
             String scPrincipal = sc.next();
+
             System.out.println("Enter Status of School");
             String scsos = sc.next();
+
             System.out.println("Enter Number of non technical stuff ");
             int nonts = sc.nextInt();
+
             System.out.println("Enter Number of non Teacher ");
             int not = sc.nextInt();
+
             System.out.println("Enter admission open or not ");
             boolean ado = sc.nextBoolean();
+
             school1 obj = new school1(scname, scAddress, scNumber, scPrincipal, scsos, nonts, not, ado);
             System.out.println("School Name : " + obj.getName());
             System.out.println("School Address : " + obj.getAddress());
@@ -251,11 +259,13 @@ public class school {
             System.out.println("School Get Admission Open : " + obj.getadmissionOpen());
             System.out.println("press 1 for teacher / press 2 for Student ");
             int val = sc.nextInt();
+
             switch (val) {
                 case 1:
                     System.out.println("You are Teacher ");
                     String teacherName, teacherPhone, teacherAddress;
                     break;
+
                 case 2:
                     System.out.println("You are Student ");
                     System.out.println("Enter Student name");
@@ -279,5 +289,4 @@ public class school {
             System.out.println("Please Enter correct Username & Password");
         }
     }
-
 }
