@@ -221,32 +221,32 @@ public class school {
         System.out.println("Enter user name : ");
         String uname = sc.next();
 
-        System.out.println("Enter Password");
+        System.out.println("Enter Password : ");
         int pas = sc.nextInt();
 
         if (user.equals(uname) && pas == pass) {
-            System.out.println("Enter School name");
+            System.out.println("Enter School name :");
             String scname = sc.next();
 
-            System.out.println("Enter School Address");
+            System.out.println("Enter School Address : ");
             String scAddress = sc.next();
 
-            System.out.println("Enter School phoneNumber");
+            System.out.println("Enter School Phone Number : ");
             String scNumber = sc.next();
 
-            System.out.println("Enter School Principal Name");
+            System.out.println("Enter School Principal Name : ");
             String scPrincipal = sc.next();
 
-            System.out.println("Enter Status of School");
+            System.out.println("Enter Status of School : ");
             String scsos = sc.next();
 
-            System.out.println("Enter Number of non technical stuff ");
+            System.out.println("Enter Number of non technical stuff : ");
             int nonts = sc.nextInt();
 
-            System.out.println("Enter Number of non Teacher ");
+            System.out.println("Enter Number of non Teacher : ");
             int not = sc.nextInt();
 
-            System.out.println("Enter admission open or not ");
+            System.out.println("Enter admission open(true) or not(false) : ");
             boolean ado = sc.nextBoolean();
 
             school1 obj = new school1(scname, scAddress, scNumber, scPrincipal, scsos, nonts, not, ado);
@@ -258,36 +258,56 @@ public class school {
             System.out.println("School Non Teaching Stuff : " + obj.getnoNonteachingStaff());
             System.out.println("School Teacher : " + obj.getnoTeacher());
             System.out.println("School Get Admission Open : " + obj.getadmissionOpen());
-            System.out.println("press 1 for teacher / press 2 for Student ");
+            System.out.println("Press 1 for teacher / Press 2 for Student / Press 3 for Parent ");
             int val = sc.nextInt();
 
             switch (val) {
                 case 1:
-                    System.out.println("You are Teacher ");
-                    String teacherName, teacherPhone, teacherAddress;
+                    System.out.println("You are a Teacher");
+                    System.out.println("Enter Teacher name : ");
+                    String teacherName = sc.next();
+                    System.out.println("Enter Teacher Address : ");
+                    String teacherAddress = sc.next();
+                    System.out.println("Enter Teacher Phone Number : ");
+                    String teacherPhone = sc.next();
+                    Teacher obj1 = new Teacher(teacherName, teacherAddress, teacherPhone);
+                    System.out.println("Teacher Name : " + obj1.getteacherName());
+                    System.out.println("Teacher Address : " + obj1.getteacherAddress());
+                    System.out.println("Teacher Phone Number : " + obj1.getteacherPhone());
                     break;
 
                 case 2:
-                    System.out.println("You are Student ");
-                    System.out.println("Enter Student name");
+                    System.out.println("You are a Student");
+                    System.out.println("Enter Student name : ");
                     String studentName = sc.next();
-                    System.out.println("Enter Student Address");
+                    System.out.println("Enter Student Address : ");
                     String studentAddress = sc.next();
-                    System.out.println("Enter Student phoneNumber");
+                    System.out.println("Enter Student Phone Number : ");
                     String studentPhone = sc.next();
-                    System.out.println("Enter Student Class");
+                    System.out.println("Enter Student Class : ");
                     String studentclass = sc.next();
-                    Student obj1 = new Student(studentName, studentAddress, studentPhone, studentclass);
-                    System.out.println("Student Name : " + obj1.getstudentName());
-                    System.out.println("Student Address : " + obj1.getstudentAddress());
-                    System.out.println("Student phone number : " + obj1.getstudentPhone());
-                    System.out.println("Student class : " + obj1.getstudentClass());
+                    Student obj2 = new Student(studentName, studentAddress, studentPhone, studentclass);
+                    System.out.println("Student Name : " + obj2.getstudentName());
+                    System.out.println("Student Address : " + obj2.getstudentAddress());
+                    System.out.println("Student Phone Number : " + obj2.getstudentPhone());
+                    System.out.println("Student Class : " + obj2.getstudentClass());
+                    break;
+
+                case 3:
+                    System.out.println("You are a Parent");
+                    System.out.println("Enter Parent name : ");
+                    String parentName = sc.next();
+                    System.out.println("Enter Your Relation with Student : ");
+                    String relation = sc.next();
+                    parent obj3 = new parent(parentName, relation);
+                    System.out.println("Parent Name : " + obj3.getParentName());
+                    System.out.println("Relation with Student : " + obj3.getRelation());
                     break;
                 default:
-                    System.out.println("You chose Wrong option");
+                    System.out.println("You chose Wrong option !!!");
             }
         } else {
-            System.out.println("Please Enter correct Username & Password");
+            System.out.println("Please Enter correct Username & Password.");
         }
     }
 }
