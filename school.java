@@ -219,7 +219,7 @@ public class school {
 
         String user = "admin";
         int pass = 12345;
-        System.out.println("Enter User name : ");
+        System.out.println("Enter Username : ");
         String uname = sc.next();
 
         System.out.println("Enter Password : ");
@@ -306,9 +306,10 @@ public class school {
                     break;
                 default:
                     System.out.println("You chose Wrong option !!!");
+                    sc.close();
             }
         } else {
-            System.out.println("Please Enter correct User name & Password.");
+            System.out.println("Please Enter Correct Username & Password.");
         }
     }
 }
