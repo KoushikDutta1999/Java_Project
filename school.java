@@ -216,9 +216,10 @@ class parent extends Student {
 public class school {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+
         String user = "admin";
         int pass = 12345;
-        System.out.println("Enter user name : ");
+        System.out.println("Enter User name : ");
         String uname = sc.next();
 
         System.out.println("Enter Password : ");
@@ -307,7 +308,7 @@ public class school {
                     System.out.println("You chose Wrong option !!!");
             }
         } else {
-            System.out.println("Please Enter correct Username & Password.");
+            System.out.println("Please Enter correct User name & Password.");
         }
     }
 }
