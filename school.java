@@ -162,7 +162,7 @@ class Teacher extends school1 {
         return teacherName;
     }
 
-    void setteacherName(String name) {
+    void setteacherName(String teacherName) {
         this.teacherName = teacherName;
     }
 
@@ -170,7 +170,7 @@ class Teacher extends school1 {
         return teacherAddress;
     }
 
-    void setteacherAddress(String address) {
+    void setteacherAddress(String teacherAddress) {
         this.teacherAddress = teacherAddress;
     }
 
@@ -244,10 +244,10 @@ public class school {
             System.out.println("Enter Number of non technical stuff : ");
             int nonts = sc.nextInt();
 
-            System.out.println("Enter Number of non Teacher : ");
+            System.out.println("Enter Number of Teacher : ");
             int not = sc.nextInt();
 
-            System.out.println("Enter admission open(true) or not(false) : ");
+            System.out.println("Enter Admission Open(true) or Closed(false) : ");
             boolean ado = sc.nextBoolean();
 
             school1 obj = new school1(scname, scAddress, scNumber, scPrincipal, scsos, nonts, not, ado);
