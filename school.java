@@ -222,6 +222,8 @@ public class school {
         System.out.println("Enter Username : ");
         String uname = sc.next();
 
+        String flag = null;
+
         System.out.println("Enter Password : ");
         int pas = sc.nextInt();
 
@@ -261,7 +263,7 @@ public class school {
             System.out.println("School Teacher : " + obj.getnoTeacher());
             System.out.println("School Get Admission Open : " + obj.getadmissionOpen());
             System.out.println("--------------------------------------------------------------");
-            System.out.println("Press 1 for teacher / Press 2 for Student / Press 3 for Parent ");
+            System.out.println("Press 1 for teacher / Press 2 for Student / Press 3 for Parent / Press 4 for Admin");
             int val = sc.nextInt();
             System.out.println("--------------------------------------------------------------");
 
@@ -279,6 +281,7 @@ public class school {
                     System.out.println("Teacher Address : " + obj1.getteacherAddress());
                     System.out.println("Teacher Phone Number : " + obj1.getteacherPhone());
                     System.out.println("--------------------------------------------------------------");
+                    flag = "teacher";
                     break;
 
                 case 2:
@@ -297,6 +300,7 @@ public class school {
                     System.out.println("Student Phone Number : " + obj2.getstudentPhone());
                     System.out.println("Student Class : " + obj2.getstudentClass());
                     System.out.println("--------------------------------------------------------------");
+                    flag = "student";
                     break;
 
                 case 3:
@@ -309,10 +313,102 @@ public class school {
                     System.out.println("Parent Name : " + obj3.getParentName());
                     System.out.println("Relation with Student : " + obj3.getRelation());
                     System.out.println("--------------------------------------------------------------");
+                    flag = "parent";
                     break;
+
+                case 4:
+                    System.out.println("You are an Admin");
+                    flag = "admin";
+                    break;
+
                 default:
                     System.out.println("You chose Wrong option !!!");
-                    sc.close();
+            }
+            if (flag.equals("admin")) {
+                System.out.println("You can add Student details by pressing 1.");
+                System.out.println("You can add Teacher details by pressing 2.");
+                System.out.println("You can update School details by pressing 3.");
+                int choice = sc.nextInt();
+                System.out.println("--------------------------------------------------------------");
+
+                switch (choice) {
+                    case 1:
+                        System.out.println("Enter Teacher name : ");
+                        String teacherName = sc.next();
+                        System.out.println("Enter Teacher Address : ");
+                        String teacherAddress = sc.next();
+                        System.out.println("Enter Teacher Phone Number : ");
+                        String teacherPhone = sc.next();
+                        Teacher obj1 = new Teacher(teacherName, teacherAddress, teacherPhone);
+                        System.out.println("Teacher Name : " + obj1.getteacherName());
+                        System.out.println("Teacher Address : " + obj1.getteacherAddress());
+                        System.out.println("Teacher Phone Number : " + obj1.getteacherPhone());
+                        System.out.println("--------------------------------------------------------------");
+                        break;
+
+                    case 2:
+                        System.out.println("Enter Student name : ");
+                        String studentName = sc.next();
+                        System.out.println("Enter Student Address : ");
+                        String studentAddress = sc.next();
+                        System.out.println("Enter Student Phone Number : ");
+                        String studentPhone = sc.next();
+                        System.out.println("Enter Student Class : ");
+                        String studentclass = sc.next();
+                        Student obj2 = new Student(studentName, studentAddress, studentPhone, studentclass);
+                        System.out.println("Student Name : " + obj2.getstudentName());
+                        System.out.println("Student Address : " + obj2.getstudentAddress());
+                        System.out.println("Student Phone Number : " + obj2.getstudentPhone());
+                        System.out.println("Student Class : " + obj2.getstudentClass());
+                        System.out.println("--------------------------------------------------------------");
+                        break;
+
+                    case 3:
+                        System.out.println("You can now Update School details.");
+                        System.out.println(
+                                "Press 1 to update School name / Press 2 to update School Address / Press 3 to update Phone number / Press 4 to update Status of school/ Press 5 to update Principal name / Press 6 to update number of non Technical Staff / Press 7 to update number of Teachers");
+                        int update = sc.nextInt();
+                        System.out.println("--------------------------------------------------------------");
+
+                        switch (update) {
+                            case 1:
+                                System.out.println("Update School Name : ");
+                                String sName = sc.next();
+                                obj.setName(sName);
+
+                            case 2:
+                                System.out.println("Updte School Address : ");
+                                String sAddress = sc.next();
+                                obj.setAddress(sAddress);
+
+                            case 3:
+                                System.out.println("Update School Phone Number : ");
+                                String sPNumber = sc.next();
+                                obj.setNumber(sPNumber);
+
+                            case 4:
+                                System.out.println("Update Status of School : ");
+                                String soschool = sc.next();
+                                obj.setStatusOfSchool(soschool);
+
+                            case 5:
+                                System.out.println("Update Name of Principal : ");
+                                String NameoP = sc.next();
+                                obj.setPrincipleName(NameoP);
+
+                            case 6:
+                                System.out.println("Update Number of Non technical Staff : ");
+                                int nonTS = sc.nextInt();
+                                obj.setnoNonteachingStaff(nonTS);
+
+                            case 7:
+                                System.out.println("Update Number of Teacher : ");
+                                int numot = sc.nextInt();
+                                obj.setnoTeacher(numot);
+                        }
+                }
+            } else {
+                System.out.println("You are not an Admin");
             }
         } else {
             System.out.println("Please Enter Correct Username & Password.");
