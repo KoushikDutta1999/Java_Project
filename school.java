@@ -1,3 +1,4 @@
+import java.net.SocketPermission;
 import java.util.Scanner;
 
 class school1 {
@@ -235,11 +236,11 @@ public class school {
             System.out.println("Enter School Phone Number : ");
             String scNumber = sc.next();
 
-            System.out.println("Enter School Principal Name : ");
-            String scPrincipal = sc.next();
-
             System.out.println("Enter Status of School : ");
             String scsos = sc.next();
+
+            System.out.println("Enter School Principal Name : ");
+            String scPrincipal = sc.next();
 
             System.out.println("Enter Number of non technical stuff : ");
             int nonts = sc.nextInt();
@@ -249,18 +250,21 @@ public class school {
 
             System.out.println("Enter Admission Open(true) or Closed(false) : ");
             boolean ado = sc.nextBoolean();
+            System.out.println("--------------------------------------------------------------");
 
             school1 obj = new school1(scname, scAddress, scNumber, scPrincipal, scsos, nonts, not, ado);
             System.out.println("School Name : " + obj.getName());
             System.out.println("School Address : " + obj.getAddress());
             System.out.println("School PhoneNumber : " + obj.getNumber());
-            System.out.println("School PrincipleName : " + obj.getPrincipleName());
             System.out.println("School Status of School : " + obj.getStatusOfSchool());
+            System.out.println("School PrincipleName : " + obj.getPrincipleName());
             System.out.println("School Non Teaching Stuff : " + obj.getnoNonteachingStaff());
             System.out.println("School Teacher : " + obj.getnoTeacher());
             System.out.println("School Get Admission Open : " + obj.getadmissionOpen());
+            System.out.println("--------------------------------------------------------------");
             System.out.println("Press 1 for teacher / Press 2 for Student / Press 3 for Parent ");
             int val = sc.nextInt();
+            System.out.println("--------------------------------------------------------------");
 
             switch (val) {
                 case 1:
@@ -275,6 +279,7 @@ public class school {
                     System.out.println("Teacher Name : " + obj1.getteacherName());
                     System.out.println("Teacher Address : " + obj1.getteacherAddress());
                     System.out.println("Teacher Phone Number : " + obj1.getteacherPhone());
+                    System.out.println("--------------------------------------------------------------");
                     break;
 
                 case 2:
@@ -292,6 +297,7 @@ public class school {
                     System.out.println("Student Address : " + obj2.getstudentAddress());
                     System.out.println("Student Phone Number : " + obj2.getstudentPhone());
                     System.out.println("Student Class : " + obj2.getstudentClass());
+                    System.out.println("--------------------------------------------------------------");
                     break;
 
                 case 3:
@@ -303,6 +309,7 @@ public class school {
                     parent obj3 = new parent(parentName, relation);
                     System.out.println("Parent Name : " + obj3.getParentName());
                     System.out.println("Relation with Student : " + obj3.getRelation());
+                    System.out.println("--------------------------------------------------------------");
                     break;
                 default:
                     System.out.println("You chose Wrong option !!!");
