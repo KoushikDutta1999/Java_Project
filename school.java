@@ -375,36 +375,42 @@ public class school {
                                 System.out.println("Update School Name : ");
                                 String sName = sc.next();
                                 obj.setName(sName);
+                                break;
 
                             case 2:
-                                System.out.println("Updte School Address : ");
+                                System.out.println("Update School Address : ");
                                 String sAddress = sc.next();
                                 obj.setAddress(sAddress);
+                                break;
 
                             case 3:
                                 System.out.println("Update School Phone Number : ");
                                 String sPNumber = sc.next();
                                 obj.setNumber(sPNumber);
+                                break;
 
                             case 4:
                                 System.out.println("Update Status of School : ");
                                 String soschool = sc.next();
                                 obj.setStatusOfSchool(soschool);
+                                break;
 
                             case 5:
                                 System.out.println("Update Name of Principal : ");
                                 String NameoP = sc.next();
                                 obj.setPrincipleName(NameoP);
-
+                                break;
                             case 6:
                                 System.out.println("Update Number of Non technical Staff : ");
                                 int nonTS = sc.nextInt();
                                 obj.setnoNonteachingStaff(nonTS);
+                                break;
 
                             case 7:
                                 System.out.println("Update Number of Teacher : ");
                                 int numot = sc.nextInt();
                                 obj.setnoTeacher(numot);
+                                break;
                         }
                 }
             } else {
